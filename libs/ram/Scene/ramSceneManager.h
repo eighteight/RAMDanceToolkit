@@ -22,6 +22,7 @@
 #include "ramBaseScene.h"
 #include "ramGlobal.h"
 #include "ramActorsScene.h"
+#include "ofxSyphon.h"
 
 
 class ramSceneManager : public ramGlobalShortcut
@@ -59,7 +60,7 @@ protected:
 	void exit(ofEventArgs& args);
 	
 private:
-	
+    ofxSyphonServer mainOutputSyphonServer;
 	static ramSceneManager *_instance;
 	ramSceneManager();
 	ramSceneManager(const ramSceneManager&);

@@ -51,6 +51,7 @@ void ramSceneManager::setup()
 	actorsScene->setup();
 	actorsScene->setEnabled(true);
 	ramGetGUI().addPanel(actorsScene, false);
+    mainOutputSyphonServer.setName("RAMDanceSyphon");
 }
 
 void ramSceneManager::addScene(ramBaseScene* scene)
@@ -263,6 +264,7 @@ void ramSceneManager::draw(ofEventArgs& args)
 			scene->drawHUD();
 			ofPopView();
 		}
+        mainOutputSyphonServer.publishScreen();
 	}
 
 	ofPopStyle();
